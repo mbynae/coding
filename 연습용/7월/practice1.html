@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본css 복습</title>
+    
+    <link href="https://webfontworld.github.io/gangwon/GangwonEduSaeeum.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh; /*px = 화면의 크기에 따른 높이 변화X, vh = 변한다*/
+            font-family: 'GangwonEduSaeeum';
+            text-align: center; /*텍스트의 정렬방향을 나타냄 */
+            padding: 2vw; /*viewpoint width vh의 너비 버전*/
+            border: 8px solid darkred; /*테두리를 화면 전체로 맞추면서 본문의 높이를 높이기 위해선?*/
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 8vw;
+            color: darkred;
+            margin-bottom: 6vw;
+        }
+        nav ul li {
+            list-style: none;
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            font-size: 30px;
+            border: 2px solid darkred;
+            border-radius: 20px;
+            padding: 0.5vw 0.8vw 0.7vw;
+            margin: 0.8vw;
+            display: inline-block;
+            color: black;           
+        }
+        nav ul li a:hover {
+            background-color: darkred;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>임시 제목</h1>
+        <nav>
+            <ul>
+                <li><a href="blank1.html">임시1</a></li>
+                <li><a href="blank2.html">임시2</a></li>
+                <li><a href="blank3.html">임시3</a></li>
+                <li><a href="blank4.html">임시4</a></li>
+            </ul>
+        </nav>
+    </main>
+</body>
+</html>
