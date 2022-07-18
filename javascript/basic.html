@@ -51,16 +51,55 @@
             border-bottom: 1px dashed #cdcdcd;
         }
         #contents h2 {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
         #contents .numList {}
         #contents .numList {
             margin-left: 30px;
         }
-        #contents .numList li { /*이미 ol이 class로 붙여있기 때문에 ol을 안씀*/
+        #contents .numList h3 { /*이미 ol이 class로 붙여있기 때문에 ol을 안씀*/
             line-height: 1.6;
             list-style: decimal-leading-zero; /*목록에 번호 넣는 법*/
+            font-weight: normal;
         }
+        #contents .numList .box {
+            background-color: #f5f5f5; /*단축 bgc*/
+            padding: 15px;
+            margin: 8px;
+            margin-bottom: 4vw;
+            line-height: 20px;
+        }
+        #contents .table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        #contents .table tr th {
+            border: 1px solid #dedede;
+            padding: 10px;
+            font-weight: normal;
+            background-color: #dedede;
+        }
+        #contents .table tr td {
+            border: 1px solid #dedede;
+            padding: 10px;
+        }
+        #contents .table .center {
+            text-align: center;
+        }
+        .script {
+            padding: 5px;
+            margin-top: 15px;
+        }
+        .script h4 {
+            font-weight: normal;
+            color: rgb(60, 85, 85);
+        }
+        .script .script01{
+
+        }
+
+
 
 
         /* 모바일용 미디어 쿼리 */
@@ -89,17 +128,92 @@
     </header>
     <section id="contents"> <!-- 교제 헤더 섹션 등의 요소 설명 87p.g-->
         <h2>자바스크립트 기본 규칙</h2>
-        <ol class="numList">
-            <li>
-                하나의 실행문이 끝나면 마지막에 세미콜론(;)을 붙여 줍니다.<br>
-                세미콜론(;)을 붙여 주지 않아도 상관은 없으나, 자바스크립트를 처음 학습하는 경우에는<br>
-                하나의 실행문을 확인하고 넘어가는 차원에서 세미콜론(;) 붙여서 코딩하는 것이 좋습니다.
-            </li>
-            <li>대소문자 구분합니다.</li>
-            <li>가독성을 위해 들여쓰기를 사용합니다.</li>
-            <li>주석(comment) 처리 방법에는 한 줄 주석처리와 여러 줄 주석처리가 있습니다.</li>
-        </ol>
-
+        <article class="numList">
+                <h3>1. 하나의 실행문이 끝나면 마지막에 세미콜론(;)을 붙여 줍니다.</h3>
+                <p>
+                    세미콜론(;)을 붙여 주지 않아도 상관은 없으나, 자바스크립트를 처음 학습하는 경우에는<br>
+                    하나의 실행문을 확인하고 넘어가는 차원에서 세미콜론(;) 붙여서 코딩하는 것이 좋습니다.
+                </p>
+                <p class="box">
+                    var num = 5;<br>
+                    document.write(num);
+                </p>
+                <h3>2. 대소문자 구분합니다.</h3>
+                <p class="box">
+                    var num = 5;<br><br>
+                    document.write(num); (O)<br><br>
+                    document.write(num); (X)
+                </p>               
+                <h3>3. 가독성을 위해 들여쓰기를 사용합니다.</h3>
+                <p class="box">
+                    var avgDistance = function()(<br>
+                    　　var speed = distance * time;<br>
+                    )
+                </p>
+                <h3>4. 주석(comment) 처리 방법에는 한 줄 주석처리와 여러 줄 주석처리가 있습니다.</h3>
+                <p class="box">
+                    // 한 줄 주석 처리 방법입니다.<br>
+                    /* 여러줄<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;주석 처리 방법입니다. */
+                </p>
+        </article>
     </section>
+
+    <section id="contents">
+        <h2>기본 명령어</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>분류</th>
+                    <th>명령어</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">입력</td>
+                    <td>prompt('입력 제목', '입력 내용')</td>
+                </tr>
+                <tr>
+                    <td class="center" rowspan="3">출력</td>
+                    <td>document.write('출력 내용')</td>
+                </tr>                
+                <tr>
+                    <td>alert('출력 내용')</td>
+                </tr>                
+                <tr>
+                    <td>console.log('출력 내용')</td>
+                </tr>                <tr>
+                    <td class="center">확인</td>
+                    <td>confirm('확인 내용')</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="script">
+            <h4>[예제] ex3-4.html</h4>
+            <article class="numList">
+                <p class="box">
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html lang="ko"&gt;<br>
+                    &lt;head&gt;<br>
+                    　　&lt;meta charset="UTF-8"&gt;<br>
+                    　　&lt;title&gt;기본 명령어&lt;/title&gt;<br>
+                    　　&lt;script&gt;<br>
+                    　　　　prompt('출력 페이지 수를 입력하세요!',''); // ''는 작은따옴표 두 개 입니다.<br>
+                    　　　　alert('자바스크립트');<br>
+                    　　　　document.write('자바스크립트');<br>
+                    　　　　console.log('자바스크립트');<br>
+                    　　　　confirm('정말 삭제 하시겠습니까?');<br>
+                    　　&lt;/script&gt;<br>
+                    &lt;/head&gt;<br>
+                    &lt;body&gt;  <br>  
+                    &lt;/body&gt;<br>
+                    &lt;/html&gt;<br>
+                </p>
+
+            </article>
+        </div>
+    </section>
+
 </body>
 </html>
