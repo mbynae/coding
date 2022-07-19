@@ -4,155 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>연습용 일기장</title>
+    <title>연습용 낙서장</title>
 
-    <link href="https://webfontworld.github.io/earlyfont/EF_Diary.css" rel="stylesheet">
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        #header {
-            font-family: 'EF_Diary';
-            padding: 2vw;
-            border-bottom: 1px dashed black;
-        }
-        #header h1 {
-            font-size: 4.4vw;
-            margin-bottom: 20px;
-        }
-        #header ul li {
-            list-style: none;
-            display: inline;
-        }
-        #header ul li a {
-            text-decoration: none;
-            border: 1px solid black;
-            color: black;
-            padding: 0.6vw 1vw;
-            font-size: 2vw;
-            font-weight: bold;
-        }
-        #header ul li a:hover {
-            background-color: black;
-            color: white;
-        }
-        #header ul li a:active {
-            background-color: gray;
-            color: white;
-        }
-        #dog {
-            padding: 2vw;
-            border-bottom: 1px dashed black;
-        }
-        #dog ul li {
-            list-style: none;
-        }
-        #dog ul li a {
-            text-decoration: none;
-            border: 1px solid black;
-            background-color: black;
-            color: white;
-            padding: 0.6vw 1vw;
-            font-size: 2vw;
-            font-weight: bold;
-        }
-        #dog ul li a:hover {
-            background-color: white;
-            color: black;
-        }
-        #dog ul li a:active {
-            background-color: gray;
-            color: white;
-        }
-        #diary .list {
-            padding: 2vw;
-            border-bottom: 1px dashed black;
-        }
-        #diary .list ul li {
-            list-style: none;
-            text-decoration: none;
-            line-height: 1.6;
-            font-size: 2.5vw;
-        }
-        .describe{
-            margin-top: 10px;
-        }
-        .describe .doglist {
-            padding: 2vw;
-        }
-        .describe .doglist h2 {
-            font-weight: normal;
-            background-color: rgb(228, 192, 101);
-            font-size: 20px;
-            padding: 10px 20px;
-            border-radius: 10px 10px 0 0;
-            display: inline-block;
-        }
-        .describe .doglist img {
-            display: block;
-            width: 60%;
-        }
-        @media (max-width: 800px){
-            #header {
-                padding: 16px;
-            }
-            #header h1 {
-                font-size: 40px;
-            }
-            #header ul li a {
-                padding: 5px 10px;
-                font-size: 18px;
-            }
-            #dog {
-                padding: 16px;
-            }
-            #dog ul li a {
-                font-size: 20px;
-            }
-            #diary {
-                padding-left: 1vw;
-            }
-            #diary .list ul li {
-                font-size: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
     <header id="header">
-        <h1>진짜 일기장</h1>
-        <ul>
-            <li><a href="blank1.html">아무</a></li>
-            <li><a href="blank2.html">거나</a></li>
-            <li><a href="blank3.html">쓰는</a></li>
-            <li><a href="blank4.html">뻘글</a></li>
-        </ul>
-    </header>
-
-    <section id="dog">
-        <ul>
-            <li><a href="dogpoint.html">리트리버 정보</a></li>
-        </ul>
-    </section>
-
-    <main id="diary">
-        <div class="list">
+        <h1>Javascript</h1>
+        <nav>
             <ul>
-                <li>01. 골든 리트리버</li>
-                <li>02. 래브라도 리트리버</li>
-                <li>03. 사모예드</li>
+                <li><a href="#">데이터 저장하기</a></li>
+                <li><a href="#">데이터 불러오기</a></li>
+                <li><a href="#">데이터 실행하기</a></li>
+                <li><a href="#">데이터 제어하기</a></li>
+                <li><a href="#">문자열 객체</a></li>
+                <li><a href="#">배열 객체</a></li>
+                <li><a href="#">수학 객체</a></li>
+                <li><a href="#">숫자 객체</a></li>
+                <li><a href="#">브라우저 객체</a></li>
+                <li><a href="#">요소 객체</a></li>
+                <li><a href="#">이벤트 객체</a></li>
             </ul>
-        </div>
-
-        <div class="describe">
-            <div id="golden" class="doglist">
-                <h2>01. 골든 리트리버</h2>
-                <img src="image/1613868313_gUaRsu8m_3ba610acf32cc4156859f9e5cb522aed954b7af7.jpg" alt="golden">
-                
-            </div>
-        </div>
-    </main>
-
+            <ul class="study">
+                <li><a href="#">기본 규칙</a></li>
+                <li><a href="#">기본 명령어</a></li>
+                <li><a href="#">연산자</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main></main>
+    <footer></footer>
+    <script></script>
 </body>
 </html>

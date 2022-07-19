@@ -21,26 +21,50 @@
         li {
             list-style: none;
         }
-        /* header 영역 */
+
+        /* 모든 페이지 레이아웃 */
+        body {
+            padding: 40px;
+        }
         #header {
-            padding: 2vw; /*탭 쉬프트탭으로 위치 옮기기(정리기능)*/
-            border-bottom: 1px dashed #cdcdcd;
+            border-bottom: 1px dashed #dcdcdc;
+            padding-bottom: 40px;
         }
+        #main {
+            padding: 40px 0;
+            border-bottom: 1px dashed #dcdcdc;
+        }
+        #footer {
+            padding: 40px 0px;
+            text-align: center;
+        }
+        #footer a:hover {
+            text-decoration: underline;
+        }
+        /* header 영역 */
         #header h1 {
-            font-size: 4vw;
-            margin-bottom: 2vw;
+            font-size: 60px;
+            margin-bottom: 30px;
         }
-        #header nav ul li {
+        .header_nav ul li {
+            display: inline;
+        }
+        .header_nav ul li a {
+            border: 1px solid #222;
+            padding: 8px 25px;
             display: inline-block;
+            margin-bottom: 7px;
         }
-        #header nav ul li a {
-            border: 1px solid #000;
-            padding: 0.7vw 1vw 0.3vw 1vw; /*왼쪽부터 시계방향*/
-            transition: all 0.3s;
-            margin-bottom: 0.7vw;
-            display: inline-block;
+        .header_nav ul li a:hover {
+            background-color: #000;
+            color: #fff;
         }
-        #header nav ul li a:hover {
+        .header_nav .study {
+            margin-top: 10px;
+        }
+        .header_nav .study li a {
+            border-radius: 50px;
+            padding: 6px 30px;
             background-color: #000;
             color: #fff;
         }
@@ -118,13 +142,27 @@
 </head>
 <body>
     <header id="header">
-        <h1>JavaScript</h1>
-        <nav>
+        <h1>Javascript</h1>
+        <nav class="header_nav">
             <ul>
-                <li><a href="javascript01.html">데이터 저장하기</a></li> 
-                <li><a href="javascript02.html">데이터 출력하기</a></li>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
+    
+
+                <li><a href="#">문자열 객체</a></li>
+                <li><a href="#">배열 객체</a></li>
+                <li><a href="#">수학 객체</a></li>
+                <li><a href="#">숫자 객체</a></li>
+                <li><a href="#">브라우저 객체</a></li>
+                <li><a href="#">요소 객체</a></li>
+                <li><a href="#">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="basic_command.html">기본 명령어</a></li>
+                <li><a href="calculation.html">연산자</a></li>
             </ul>
         </nav>
     </header>

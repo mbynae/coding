@@ -1,0 +1,63 @@
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+/* 리셋 */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'NexonLv1Gothic';
+    line-height: 1.6;
+}
+
+/* 링크 초기화 */
+a {
+    text-decoration: none;
+}
+
+/* 제목 굵기 초기화 */
+h1 h2 h3 h4 h5 h6 {
+    font-weight: normal;
+}
+
+/* 목록 초기화 */
+li {
+    list-style: none;
+}
+
+body {
+    padding: 40px;
+}
+
+/* header 영역 */
+#header {
+    border-bottom: 2px dashed #dcdcdc;
+    padding-bottom: 40px;
+
+}
+
+#header h1 {
+    font-size: 60px;
+    font-weight: normal;
+}
+#header nav ul li {
+    display: inline;
+    text-decoration: none;
+}
+#header nav ul li a {
+    border: 1px solid black;
+    color: black;
+    padding: 8px 25px;
+    display: inline-block;
+    margin-bottom: 7px;
+}
+#header nav ul li a:hover {
+    background-color: black;
+    color: white;
+}
+#header nav .study {
+    margin-top: 10px;
+}
+#header nav .study li a {
+    border-radius: 50px;
+    padding: 6px 30px;
+    background-color: black;
+    color: white;
+}
