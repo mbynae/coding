@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML 기초</title>
+    <title>블록/인라인 요소</title>
 
     <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
     <style>
@@ -69,8 +69,13 @@
             font-weight: normal;
             margin-bottom: 10px;
         }
-        .article p {
+        .article h3 {
+            font-weight: normal;
             margin-bottom: 10px;
+            margin-top: 3vw;
+        }
+        .article p {
+            margin-bottom: 2px;
         }
         .article .table {
             width: 100%;
@@ -92,10 +97,21 @@
         .article .table .center {
             text-align: center;
         }
-
+        .article #table_line {
+            margin-bottom: 15px;
+        }
         .article .box {
             background-color: #f5f5f5; /*단축 bgc*/
             padding: 15px;
+            margin-bottom: 20px;
+        }
+        .script {
+            padding: 5px;
+            margin-top: 15px;
+        }
+        .script h4 {
+            font-weight: normal;
+            color: rgb(60, 85, 85);
         }
 
         /* 미디어 커리 */
@@ -116,12 +132,13 @@
         }
     </style>
 </head>
+
 <body>
     <header id="header">
         <h1>HTML</h1>
         <nav>
             <ul>
-                <li><a href="basic.html">기초</a></li>
+                <li><a href="$">기초</a></li>
                 <li><a href="#">주제</a></li>
                 <li><a href="#">알파벳</a></li>
             </ul>
@@ -137,52 +154,72 @@
                 <li><a href="block_inline.html">블록/인라인 요소</a></li>
             </ul>
         </nav>
+
         <article class="article">
-            <h2>HTML5 기본 문서</h2>
+            <h2>블록 레벨 요소와 인라인 요소</h2>
             <p>
-                HTML 요소는 &lt;head&gt; 요소와 body 요소로 구성되어 있으며, head 요소 안에는 meta, title,
-                link, style, script 등의 요소들이 올 수 있습니다. <!-- &lt;,&gt; = <>표시를 나타낼 수 있는 특수 기호-->
-            </p> <!--태그와 요소는 같은 말-->
+                요소의 유형은 '블록 레벨 요소'와 '인라인 요소'로 나누어집니다.
+            </p> <br>
+            <h3>1. 블록 요소</h3>
+            <p>블록 레벨 요소는 마크업을 할 때 줄이 바뀌는 특성을 가지고 있습니다</p>
+            <div class="script">
+                <h4>[예시1]</h4>
+                <article class="numList">
+                    <p class="box">
+                        블록 레벨 요소<br>
+                        줄바꿈이 생깁니다
+                    </p>
+                </article>
+                <p>
+                    &lt;h1&gt;, &lt;h2&gt;, &lt;p&gt; 등의 요소들은 블록의 성질을 가지고 있습니다
+                </p>
+            </div>
+
+            <h3>2. 인라인 요소</h3>
+            <p>
+                인라인 요소는 블록 레벨 요소와 달리 줄 바꿈 특성이 없어 블록 레벨 요소처럼
+                행이 바뀌지 않습니다.
+            </p>
+            <div class="script">
+                <h4>[예시2]</h4>
+                <article class="numList">
+                    <p class="box">
+                        인라인 요소 인라인 요소는 한 줄로 출력됩니다.
+                    </p>
+                </article>
+                <p>
+                    &lt;strong&gt;, &lt;span&gt; 등의 요소들은 인라인 성질을 가지고 있습니다.
+                </p>
+            </div>
+            
+            <h3 id="table_line">3. 블록 레벨 요소와 인라인 요소의 특징 정리</h3>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>요소명</th>
-                        <th>설명</th>
+                        <th>요소 유형</th>
+                        <th>특징</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="center">&lt;meta&gt;</td>
-                        <td>HTML 문서의 설명, 키워드, 문서의 작성자 등을 지정합니다</td>
-                    </tr>
-                    <tr>
-                        <td class="center">&lt;title&gt;</td>
-                        <td>HTML 문서의 제목을 지정합니다</td>
-                    </tr>
-                    <tr>
-                        <td class="center">&lt;link&gt;</td>
-                        <td>외부의 CSS 파일을 HTML 문서에 연결할 때 사용합니다</td>
-                    </tr>
-                    <tr>
-                        <td class="center">&lt;style&gt;</td>
-                        <td>HTML 문서 내에서 스타일(CSS)을 정의합니다</td>
-                    </tr>
-                    <tr>
-                        <td class="center">&lt;script&gt;</td>
+                        <td class="center">블록 레벨 요소</td>
                         <td>
-                            자바스크립트를 HTML 문서 내부에서 정의하거나 외부에서 자바스크립트 파일을 불러올 때
-                            사용합니다
+                            1. 블록 레벨 요소는 줄 바꿈이 일어납니다.<br>
+                            2. 블록 레벨 요소는 텍스트(문자)와 인라인 요소를 자식 요소로 포함할 수 있습니다.<br>
+                            3. 블록 레벨 요소중에는 블록 레벨 요소를 자식 요소로 포함 할 수 있는 요소와
+                               포함할 수 없는 요소가 있습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">인라인 요소</td>
+                        <td>
+                            1. 인라인 요소는 줄 바꿈이 일어나지 않습니다.<br>
+                            2. 인라인 요소는 텍스트(문자와) 인라인 요소를 자식요소로 포함할 수 없습니다.<br>
+                            3. 인라인 요소는 블록 레벨 요소를 자식 요소로 포함할 수 없습니다.
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <p class="box">
-                &lt;meta name = "viewport"&gt;
-            </p>
-            <p>뷰포트라고 하면 문서를 조절해 주는 속성이다.</p>
-            <p class="box">
-                &lt;meta name = "viewport"&gt;
-            </p>
         </article>
     </section>
 </body>

@@ -5,49 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS 기초</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-        #header {
-            padding: 0.5vw;
-            margin-left: 10px;
-            border-bottom: dashed #f5f5f5;
-        }
-        #header h1 {
-            font-size: 5.5vw;
-            padding-bottom: 1.8vw;
-        }
-        #header nav {}
-        #header nav ul {}
-        #header nav ul li {
-            list-style: none;
-            display: inline;
-        }
-        #header nav ul li a {
-            text-decoration: none;
-            color: black;        
-            padding: 0.6vw 1vw; 
-            font-size: 0.8vw;
-            border: 1px solid black;
-            display: inline-block;
-            font-weight: bold;
-        }
-        #header nav ul li a:hover {
-            background-color: black;
-            color: white;
-        }
-    </style>
+
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header id="header">
         <h1>CSS</h1>
-        <nav>
+        <nav class="header_nav">
             <ul>
                 <li><a href="#">기초</a></li>
                 <li><a href="#">주제</a></li>
                 <li><a href="#">알파벳</a></li>
+                <li><a href="#">단위</a></li>
             </ul>
         </nav>
     </header>

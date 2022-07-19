@@ -90,7 +90,9 @@ body {
     color: #666;
 }
 .main_sample .script {}
-.main_sample .result {}
+.main_sample .result {
+    margin-bottom: 80px;
+}
 
 @media (max-width: 800px){
     body {
