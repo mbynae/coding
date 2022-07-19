@@ -7,6 +7,7 @@
     <title>자바스크립트 : 데이터 저장하기</title>
    
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dracula.css">
 </head>
 <body>
     <header id="header">
@@ -36,7 +37,53 @@
     <!-- //header --> 
 
     <main id="main">
-        <div class="main_script"></div>
+        <div class="main_menu">
+            <ul> <!-- 단축 ul>li*17>a[href="#"]{$$.} + 아디디값을 써줘도 링크 연결 가능-->
+                <li><a href="#sample01">01. 변수 : 데이터 저장</a></li>
+                <li><a href="#sample02">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
+                <li><a href="#sample03">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
+                <li><a href="#sample04">04. 변수 : 지역 변수 + 전역 변수 + 매개 변수</a></li>
+                <li><a href="#sample05">05. 상수 : 데이터 저장 + 데이터 변경(X)</a></li>
+                <li><a href="#sample06">06. 배열 : 데이터 저장(여러개) : 표현 방법1</a></li>
+                <li><a href="#sample07">07. 배열 : 데이터 저장(여러개) : 표현 방법2</a></li>
+                <li><a href="#sample08">08. 배열 : 데이터 저장(여러개) : 표현 방법3</a></li>
+                <li><a href="#sample09">09. 배열 : 데이터 저장(여러개) : 표현 방법4</a></li>
+                <li><a href="#sample10">10. 객체 : 데이터 저장(키와 값) : 표현 방법1</a></li>
+                <li><a href="#sample11">11. 객체 : 데이터 저장(키와 값) : 표현 방법2</a></li>
+                <li><a href="#sample12">12. 객체 : 데이터 저장(키와 값) : 표현 방법3</a></li>
+                <li><a href="#sample13">13. 객체 : 데이터 저장(키와 값) : 표현 방법4</a></li>
+                <li><a href="#sample14">14. 객체 : 데이터 저장(키와 값) : 표현 방법5</a></li>
+                <li><a href="#sample15">15. 객체 : 데이터 저장(키와 값) : 표현 방법6</a></li>
+                <li><a href="#sample16">16. 객체 : 데이터 저장(키와 값) : 표현 방법7</a></li>
+                <li><a href="#sample17">17. 객체 : 데이터 저장(키와 값) : 표현 방법8</a></li>
+            </ul>
+        </div>
+        <div class="main_sample">
+            <div id="sample01" class="sample">
+                <h3>01. 변수 : 데이터 저장</h3>
+                <p>
+                    변수는 데이터를 저장하는 저장소 입니다.
+                    이 저장소에는 숫자, 문자, 함수, 객체 등을 저장할 수 있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">var x = 100;
+var y = 200;
+var z = "Javascript"
+document.write(x);
+document.write(y);
+document.write(z);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample01_result">
+
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
         <div class="main_desc"></div>
     </main>
     <!-- //main --> 
@@ -45,5 +92,23 @@
         <a href="mailto:piowm123@gmail.com">piowm123@gmail.com</a>
     </footer>
     <!-- //footer --> 
+
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    <script>
+        {
+            var x = 100;
+            var y = 200;
+            var z = "javescritp";
+
+            document.write(x);
+            document.write(y);
+            document.write(z);
+
+            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z // 자바스크립트의 위치 지정 방식
+        }
+    </script>
 </body>
 </html>
