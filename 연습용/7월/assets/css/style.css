@@ -5,6 +5,7 @@
     margin: 0;
     font-family: 'NexonLv1Gothic';
     line-height: 1.6;
+    font-size: 16px;
 }
 
 /* 링크 초기화 */
@@ -23,14 +24,13 @@ li {
 }
 
 body {
-    padding: 40px;
+    padding: 20px;
 }
 
 /* header 영역 */
 #header {
     border-bottom: 2px dashed #dcdcdc;
     padding-bottom: 40px;
-
 }
 
 #header h1 {
@@ -60,4 +60,19 @@ body {
     padding: 6px 30px;
     background-color: black;
     color: white;
+}
+
+/* main 영역 */
+#main {
+    border-bottom: 2px dashed #dcdcdc;
+    padding: 40px 0;
+}
+#main .main_menu {}
+#main .main_menu ul li {
+    display: flex;
+}
+#main .main_menu ul li a {
+    border: 1px dotted black;
+    padding: 5px;
+    line-height: 2;
 }
