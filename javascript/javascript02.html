@@ -1,76 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : 데이터 불러하기</title>
-   
+    <title>자바스크립트 : 데이터 불러오기</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dracula.css">
+
 </head>
 <body>
     <header id="header">
-        <h1>Javascript</h1>
+        <h1><a href="index.html">Javascript</a></h1>
         <nav class="header_nav">
             <ul>
                 <li><a href="javascript01.html">데이터 저장하기</a></li>
-                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li class="active"><a href="javascript02.html">데이터 불러오기</a></li>
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
-    
 
-                <li><a href="#">문자열 객체</a></li>
-                <li><a href="#">배열 객체</a></li>
-                <li><a href="#">수학 객체</a></li>
-                <li><a href="#">숫자 객체</a></li>
-                <li><a href="#">브라우저 객체</a></li>
-                <li><a href="#">요소 객체</a></li>
-                <li><a href="#">이벤트 객체</a></li>
+
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">숫자 객체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
             </ul>
             <ul class="study">
-                <li><a href="#">기본 규칙</a></li>
-                <li><a href="#">기본 명령어</a></li>
-                <li><a href="calculation.html">연산자</a></li>
+                <li><a href="study/basic.html">기본 규칙</a></li>
+                <li><a href="study/basic_command.html">기본 명령어</a></li>
+                <li><a href="study/calculation.html">연산자</a></li>
             </ul>
         </nav>
     </header>
-    <!-- //header --> 
-
+    <!-- //header -->
     <main id="main">
-        <div class="maim_menu"></div> <!-- 단축 .maim_menu / ul>li*23>a[href="#sample$$"]{$$.} -->
+        <div class="main_menu">
             <ul>
                 <li><a href="#sample01">01. 변수 : 데이터 불러오기</a></li>
                 <li><a href="#sample02">02. 상수 : 데이터 불러오기</a></li>
                 <li><a href="#sample03">03. 배열 : 데이터 불러오기</a></li>
-                <li><a href="#sample04">04. 배열 : 데이터 불러오기 :2차 배열</a></li>
+                <li><a href="#sample04">04. 배열 : 데이터 불러오기 : 2차 배열</a></li>
                 <li><a href="#sample05">05. 배열 : 데이터 불러오기 : 갯수 구하기</a></li>
                 <li><a href="#sample06">06. 배열 : 데이터 불러오기 : for()문</a></li>
-                <li><a href="#sample07">07. 배열 : 데이터 불러오기 : for Each()</a></li>
+                <li><a href="#sample07">07. 배열 : 데이터 불러오기 : forEach()</a></li>
                 <li><a href="#sample08">08. 배열 : 데이터 불러오기 : for of</a></li>
                 <li><a href="#sample09">09. 배열 : 데이터 불러오기 : for in</a></li>
                 <li><a href="#sample10">10. 배열 : 데이터 불러오기 : map()</a></li>
                 <li><a href="#sample11">11. 배열 : 데이터 불러오기 : 펼침연산자</a></li>
                 <li><a href="#sample12">12. 배열 : 데이터 불러오기 : 배열구조분해할당</a></li>
                 <li><a href="#sample13">13. 객체 : 데이터 불러오기 : 기본</a></li>
-                <li><a href="#sample14">14. 객체 : 데이터 불러오기 : Objact</a></li>
+                <li><a href="#sample14">14. 객체 : 데이터 불러오기 : Object</a></li>
                 <li><a href="#sample15">15. 객체 : 데이터 불러오기 : 변수</a></li>
                 <li><a href="#sample16">16. 객체 : 데이터 불러오기 : for in</a></li>
                 <li><a href="#sample17">17. 객체 : 데이터 불러오기 : map()</a></li>
                 <li><a href="#sample18">18. 객체 : 데이터 불러오기 : hasOwnProperty()</a></li>
-                <li><a href="#sample19">19. 객체 : 데이터 불러오기 : 펼침연산사 - 복사</a></li>
-                <li><a href="#sample20">20. 객체 : 데이터 불러오기 : 펼침연산사 - 추가</a></li>
-                <li><a href="#sample21">21. 객체 : 데이터 불러오기 : 펼침연산사 - 결합</a></li>
+                <li><a href="#sample19">19. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</a></li>
+                <li><a href="#sample20">20. 객체 : 데이터 불러오기 : 펼침연산자 - 추가</a></li>
+                <li><a href="#sample21">21. 객체 : 데이터 불러오기 : 펼침연산자 - 결합</a></li>
                 <li><a href="#sample22">22. 객체 : 데이터 불러오기 : 비구조화 할당</a></li>
                 <li><a href="#sample23">23. 객체 : 데이터 불러오기 : 객체구조분해할당</a></li>
             </ul>
-        <div class="main_script"></div>
-        <div class="main_desc"></div>
-    </main>
-    <!-- //main --> 
+        </div>
+        <div class="main_sample">
+            <!-- //sample01 -->
+            <div id="sample01" class="sample">
+                <h3>01. 변수 : 데이터 불러오기</h3>
+                <p></p>
+                <div class="script">
+<pre><code class="language-js">let x = 100,        // 중복되는 let를 생략 가능
+     y = 200, 
+     z = "javascript";
 
+document.write(x);
+document.write(y);
+document.write(z);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample01_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+            <!-- //sample02 -->
+            <div id="sample02" class="sample">
+                <h3>02. 상수 : 데이터 불러오기</h3>
+                <p></p>
+                <div class="script">
+<pre><code class="language-js">const x = 100,        // 중복되는 let를 생략 가능
+         y = 200, 
+         z = "javascript";
+
+document.write(x);
+document.write(y);
+document.write(z);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample02_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample02 -->     
+            
+            <!-- //sample03 -->
+            <div id="sample03" class="sample">
+                <h3>03. 배열 : 데이터 불러오기</h3>
+                <p></p>
+                <div class="script">
+<pre><code class="language-js">const arr = [100, 200, "javascript"]
+
+document.write(arr[0]);
+document.write(arr[1]);
+document.write(arr[2]);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample03_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample03 -->
+
+            <!-- //sample04 -->
+            <div id="sample04" class="sample">
+                <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
+                <p></p>
+                <div class="script">
+<pre><code class="language-js">const arr = [100, 200, ["javascript", "jquery"]];
+
+document.write(arr[0]);
+document.write(arr[1]);
+document.write(arr[2][0]); //2차 배열 출력 방식
+document.write(arr[2][1]);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample04_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample04 -->
+
+            <!-- //sample05 -->
+            <div id="sample05" class="sample">
+                <h3>05. 배열 : 데이터 불러오기 : 갯수 구하기</h3>
+                <p></p>
+                <div class="script">
+<pre><code class="language-js">const arr = [100, 200, "javascript"]
+
+document.write(arr.length);      //length는 속성이며 배열의 갯수를 출력해줌. 보통 속성은 괄호가 없지만 렝스는 있다
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample05_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample05 -->
+
+            <!-- //sample06 -->
+            <div id="sample06" class="sample">
+                <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
+                <p></p>
+                <div class="script">
+<pre><code class="language-js">const arr = [100, 200, 300, 400, 500];
+
+//document.write(arr[0]);
+//document.write(arr[1]);
+//document.write(arr[2]);
+//document.write(arr[3]);
+//document.write(arr[4]);
+
+//for(초기값, 조건식, 증감식)
+for(let i=0; i&lt;arr.length; i++){   //출력 반복적으로 쓰는걸 줄이는 방식. ++는 하나씩 순서대로 표현해주는 방식  
+    document.write(arr[i]);     // i=0, i&lt;9, document, i++ 순으로 돌아가며 조건이 맞지 않을때까지 반복된다.
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample06_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample06 -->
+
+            <!-- //sample07 -->
+            <div id="sample07" class="sample">
+                <h3>07. 배열 : 데이터 불러오기 : forEach()</h3>
+                <p></p>
+                <div class="script">
+<pre><code class="language-js">const num = [100, 200, 300, 400, 500];
+
+//for문을 이용해서 출력
+for(let i=0; i&lt;num.length; i++){
+    document.write(num[i]);
+};
+
+//forEach()를 이용해서 출력. forEach는 매쏘드
+num.forEach(function(el){         //실행문 안에 실행문이 들어간걸 콜백함수 라고 함. element는 요소나 인자로 el로 줄여서 씀
+    document.write(el);
+});
+
+//forEach() 3가지 인자()값
+num.forEach(function(element, index, array){    // function에 여러 요소가 들어갈 수 있다.
+    document.write(element);
+    document.write(index);
+    document.write(array);       //array는 출력값에 "," 가 들어가는 특징이 있다.
+})
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample07_result">
+                            100200300400500<br><br>
+
+                            100200300400500<br><br>
+
+                            100<br>
+                            0<br>
+                            100,200,300,400,500<br>
+                            200<br>
+                            1<br>
+                            100,200,300,400,500<br>
+                            300<br>
+                            2<br>
+                            100,200,300,400,500<br>
+                            400<br>
+                            3<br>
+                            100,200,300,400,500<br>
+                            500<br>
+                            4<br>
+                            100,200,300,400,500<br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample07 -->
+
+        </div>
+    </main>
+    <!-- //main -->
     <footer id="footer">
         <a href="mailto:piowm123@gmail.com">piowm123@gmail.com</a>
     </footer>
-    <!-- //footer --> 
+    <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    <script>
+        //01
+        {
+            //let x = 100;
+            //let y = 200;
+            //let z = "javescritp";
+
+            let x = 100,        // 중복되는 let를 생략 가능
+                y = 200, 
+                z = "javascript";
+
+            // document.write(x);
+            // document.write(y);
+            // document.write(z);
+        
+            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z
+        }
+
+        document.write("<br><br>");     //이런식으로 간격을 넓힐 수 있다
+
+        //02
+        {
+            const x = 100,        // 중복되는 let를 생략 가능
+                  y = 200, 
+                  z = "javascript";
+
+            // document.write(x);
+            // document.write(y);
+            // document.write(z);
+        
+            document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" + z
+        }
+
+
+        //03
+        {
+            const arr = [100, 200, "javascript"]
+
+            //document.write(arr[0]);
+            //document.write(arr[1]);
+            //document.write(arr[2]);
+
+            document.querySelector(".sample03_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2]
+        }
+
+
+        //04
+        {
+            const arr = [100, 200, ["javascript", "jquery"]];
+
+            //document.write(arr[0]);
+            //document.write(arr[1]);
+            //document.write(arr[2][0]); //2차 배열 출력 방식
+            //document.write(arr[2][1]);
+
+            document.querySelector(".sample04_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2][0] + "<br>" + arr[2][1]
+        }
+
+        //05
+        {
+            const arr = [100, 200, "javascript"]
+
+            // document.write(arr.length);      //length는 속성이며 배열의 갯수를 출력해줌. 보통 속성은 괄호가 없지만 렝스는 있다
+        
+            document.querySelector(".sample05_result").innerHTML = arr.length
+        }
+
+        //06
+        {
+            const arr = [100, 200, 300, 400, 500];
+
+            //document.write(arr[0]);
+            //document.write(arr[1]);
+            //document.write(arr[2]);
+            //document.write(arr[3]);
+            //document.write(arr[4]);
+
+            //for(초기값, 조건식, 증감식)
+            // for(let i=0; i<arr.length; i++){   //출력 반복적으로 쓰는걸 줄이는 방식. ++는 하나씩 순서대로 표현해주는 방식  
+            //     document.write(arr[i]);     // i=0, i<9, document, i++ 순으로 돌아가며 조건이 맞지 않을때까지 반복된다.
+            // }
+        
+            // document.querySelector(".sample06_result").innerHTML = arr[];
+        }
+
+        //07 forEach()
+        {
+            const num = [100, 200, 300, 400, 500];
+
+            //for문을 이용해서 출력
+            // for(let i=0; i<num.length; i++){
+            //     document.write(num[i]);
+            // };
+
+            //forEach()를 이용해서 출력. forEach는 매쏘드
+            // num.forEach(function(el){         //실행문 안에 실행문이 들어간걸 콜백함수 라고 함. element는 요소나 인자로 el로 줄여서 씀
+            //     document.write(el);
+            // });
+
+            //forEach() 3가지 인자()값
+            // num.forEach(function(element, index, array){    // function에 여러 요소가 들어갈 수 있다.
+            //     document.write(element,"<br>");
+            //     document.write(index,"<br>");
+            //     document.write(array,"<br>");       //array는 출력값에 "," 가 들어가는 특징이 있다.
+            // })
+            
+            // document.querySelector(".sample05_result").innerHTML = arr.length
+        }
+    </script>
 </body>
 </html>

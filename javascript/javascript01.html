@@ -12,27 +12,27 @@
 </head>
 <body>
     <header id="header">
-        <h1>Javascript</h1>
+        <h1><a href="index.html">Javascript</a></h1>
         <nav class="header_nav">
             <ul>
-                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li class="active"><a href="javascript01.html">데이터 저장하기</a></li>
                 <li><a href="javascript02.html">데이터 불러오기</a></li>
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
     
 
-                <li><a href="#">문자열 객체</a></li>
-                <li><a href="#">배열 객체</a></li>
-                <li><a href="#">수학 객체</a></li>
-                <li><a href="#">숫자 객체</a></li>
-                <li><a href="#">브라우저 객체</a></li>
-                <li><a href="#">요소 객체</a></li>
-                <li><a href="#">이벤트 객체</a></li>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">숫자 객체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
             </ul>
             <ul class="study">
-                <li><a href="basic.html">기본 규칙</a></li>
-                <li><a href="#">기본 명령어</a></li>
-                <li><a href="calculation.html">연산자</a></li>
+                <li><a href="study/basic.html">기본 규칙</a></li>
+                <li><a href="study/basic_command.html">기본 명령어</a></li>
+                <li><a href="study/calculation.html">연산자</a></li>
             </ul>
         </nav>
     </header>
@@ -481,7 +481,82 @@ document.write(obj.d);
                         </details>
                     </div>
                 </div>
+
+            <!-- 16. 객체 : 데이터 저장(키와 값) : 표현 방법7 객체 속에 변수-->
+            <div id="sample16" class="sample">
+                <h3>16. 객체 : 데이터 저장(키와 값) : 객체 속에 변수</h3>
+                <p>
+                    객체 표현의 여섯번째 방법 입니다.<br>
+                    객체 안에 배열을 넣고 표현할 수 있으며, 객체 안에 객체를 넣을 수 도 있습니다.
+                </p>
+                <div class="script">
+<pre><code class="language-js">
+
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            <div class="sample16_result">
+
+                            </div>
+                        </details>
+                    </div>
+                </div>
             
+                <!-- 17. 객체 : 데이터 저장(키와 값) : 표현 방법8 객체 속에 함수-->                    
+                <div id="sample17" class="sample">
+                    <h3>17. 객체 : 데이터 저장(키와 값) : 객체 속에 함수</h3>
+                    <p>
+                        객체 표현의 여섯번째 방법 입니다.<br>
+                        객체 안에 배열을 넣고 표현할 수 있으며, 객체 안에 객체를 넣을 수 도 있습니다.
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">const obj = {
+    a : 100,
+    b : [200,300],
+    c : {x:400, y:500},
+    d : "javascript",
+    e : function(){
+        document.write("자바스크립트가 실행되었습니다.");
+    },
+    f : function(){
+        document.write( obj.d + "가 실행되었습니다.");  //이런식으로 document 안에 요소를 넣어서 표현이 가능
+    },
+    g : function(){
+        document.write( this.d + "가 실행되었습니다."); // this는 요소를 호출하는 선언이다 
+    }
+}
+
+document.write(obj.a);
+document.write(obj.b[0]);
+document.write(obj.b[1]);
+document.write(obj.c.x);
+document.write(obj.c.y);
+document.write(obj.c);
+document.write(obj.d);
+obj.e();    //함수는 document.write 제거하고 ()를 추가해야 제대로 나온다
+obj.f();
+obj.g();
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과보기</summary>
+                                <div class="sample17_result">
+                                    100<br>
+                                    200<br>
+                                    300<br>
+                                    400<br>
+                                    500<br>
+                                    javascript<br>
+                                    자바스크립트가 실행되었습니다.<br>
+                                    javascript가 실행되었습니다.<br>
+                                    javascript가 실행되었습니다.<br>
+                                </div>
+                            </details>
+                        </div>
+                    </div>                
         </div>
     </main>
     <!-- //main --> 
@@ -725,10 +800,57 @@ document.write(obj.d);
             document.querySelector(".sample15_result").innerHTML = obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>"
             + obj.c.x + "<br>" + obj.c.y + "<br>" + obj.d
         }
+       
+        //16. 객체 : 객체 속에 변수
+        {
+            const a = 100;
+            const b = 200;
+            const c = "javascript";
+
+            const obj = {a, b, c}   //객체 속에 변수를 넣어서 표현함
+
+            // document.write(obj.a);
+            // document.write(obj.b);
+            // document.write(obj.c);
+            
+            document.querySelector(".sample16_result").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.c;
+        }
+   
+        document.write("<br>","<br>");
+
+        //17. 객체 : 객체 속에 함수
+        {
+            const obj = {
+                a : 100,
+                b : [200,300],
+                c : {x:400, y:500},
+                d : "javascript",
+                e : function(){
+                    document.write("자바스크립트가 실행되었습니다.");
+                },
+                f : function(){
+                    document.write( obj.d + "가 실행되었습니다.");  //이런식으로 document 안에 요소를 넣어서 표현이 가능
+                },
+                g : function(){
+                    document.write( this.d + "가 실행되었습니다."); // this는 요소를 호출하는 선언이다 
+                }
+            }
+
+            // document.write(obj.a);
+            // document.write(obj.b[0]);
+            // document.write(obj.b[1]);
+            // document.write(obj.c.x);
+            // document.write(obj.c.y);
+            // document.write(obj.c);
+            // document.write(obj.d);
+            // obj.e();    //함수는 document.write 제거하고 ()를 추가해야 제대로 나온다
+            // obj.f();
+            // obj.g();
         
-
-
-
-    </script>
+            // document.querySelector(".sample17_result").innerHTML = obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1]
+            // + "<br>" + obj.c.x + "<br>" + obj.c.y + "<br>" + obj.c + "<br>" + obj.c.d + "<br>" + obj.e() + "<br>" + obj.f()
+            //  + "<br>" + obj.g()
+        }
+            </script>
 </body>
 </html>
