@@ -31,8 +31,8 @@
             </ul>
             <ul class="study">
                 <li><a href="study/basic.html">기본 규칙</a></li>
-                <li><a href="study/basic_command.html">기본 명령어</a></li>
                 <li><a href="study/calculation.html">연산자</a></li>
+                <li><a href="study/for.html">for문</a></li>
             </ul>
         </nav>
     </header>
@@ -40,7 +40,7 @@
 
     <main id="main">
         <div class="main_menu">
-            <ul> <!-- 단축 ul>li*17>a[href="#"]{$$.} + 아이디값을 써줘도 링크 연결 가능-->
+            <ul> <!-- 단축 ul>li*17>a[href="#"]{$$.} + 아디디값을 써줘도 링크 연결 가능-->
                 <li><a href="#sample01">01. 변수 : 데이터 저장</a></li>
                 <li><a href="#sample02">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
                 <li><a href="#sample03">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
@@ -490,8 +490,15 @@ document.write(obj.d);
                     객체 안에 배열을 넣고 표현할 수 있으며, 객체 안에 객체를 넣을 수 도 있습니다.
                 </p>
                 <div class="script">
-<pre><code class="language-js">
+<pre><code class="language-js">const a = 100;
+const b = 200;
+const c = "javascript";
 
+const obj = {a, b, c}   //객체 속에 변수를 넣어서 표현함
+
+document.write(obj.a);
+document.write(obj.b);
+document.write(obj.c);           
 </code></pre>
                     </div>
                     <div class="result">
@@ -504,7 +511,7 @@ document.write(obj.d);
                     </div>
                 </div>
             
-                <!-- 17. 객체 : 데이터 저장(키와 값) : 표현 방법8 객체 속에 함수-->                    
+            <!-- 17. 객체 : 데이터 저장(키와 값) : 표현 방법8 객체 속에 함수-->                    
                 <div id="sample17" class="sample">
                     <h3>17. 객체 : 데이터 저장(키와 값) : 객체 속에 함수</h3>
                     <p>
@@ -809,9 +816,9 @@ obj.g();
 
             const obj = {a, b, c}   //객체 속에 변수를 넣어서 표현함
 
-            // document.write(obj.a);
-            // document.write(obj.b);
-            // document.write(obj.c);
+            //document.write(obj.a);
+            //document.write(obj.b);
+            //document.write(obj.c);
             
             document.querySelector(".sample16_result").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.c;
         }
