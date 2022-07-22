@@ -17,6 +17,8 @@
         }
         #wrap {
             width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
         }
         #header {
             width: 100%;
@@ -32,36 +34,32 @@
             width: 25%;
             height: 780px;
             background-color: #81C784;
-            float: left;
         }
         #section {
             width: 50%;
             height: 780px;
             background-color: #66BB6A;
-            float: left;
         }
         #article {
             width: 25%;
             height: 780px;
             background-color: #4CAF50;
-            float: left;
         }
         #footer {
             width: 100%;
             height: 100px;
             background-color: #43A047;
-            clear: both;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="aside"></div>
-        <div id="section"></div>
-        <div id="article"></div>
-        <div id="footer"></div>
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <sectiion id="section"></sectiion>
+        <article id="article"></article>
+        <footer id="footer"></footer>
     </div>
 </body>
 </html>

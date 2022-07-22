@@ -4,53 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃02</title>
+    <title>Document</title>
 
     <style>
         * {
             margin: 0;
-            margin: 0 auto;
         }
         body {
-            background-color: #E8F5E9;
+            background-color: #E1F5FE;
             height: 100%;
         }
         #wrap {
+            margin: 0 auto;
             width: 1200px;
+            display: flex;
+            flex-flow: wrap;
         }
         #header {
             width: 100%;
             height: 100px;
-            background-color: #C8E6C9;
+            background-color: #B3E5FC;
         }
         #nav {
             width: 100%;
             height: 100px;
-            background-color: #A5D6A7;
+            background-color: #81D4FA;
         }
         #aside {
             width: 25%;
             height: 780px;
-            background-color: #81C784;
-            float: left;
+            background-color: #4FC3F7;
         }
         #section {
-            width: 50%;
-            height: 780px;
-            background-color: #66BB6A;
-            float: left;
+            width: 75%;
+            height: 260px;
+            background-color: #29B6F6;
         }
         #article {
-            width: 25%;
-            height: 780px;
-            background-color: #4CAF50;
-            float: left;
+            width: 75%;
+            height: 260px;
+            background-color: #03A9F4;
+        }
+        #article2 {
+            width: 75%;
+            height: 260px;
+            background-color: #039BE5;
         }
         #footer {
             width: 100%;
             height: 100px;
-            background-color: #43A047;
-            clear: both;
+            background-color: #0288D1;
         }
     </style>
 </head>
@@ -61,6 +64,7 @@
         <div id="aside"></div>
         <div id="section"></div>
         <div id="article"></div>
+        <div id="article2"></div>
         <div id="footer"></div>
     </div>
 </body>
