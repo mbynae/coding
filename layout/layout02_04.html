@@ -30,6 +30,11 @@
             height: 100px;
             background-color: #A5D6A7;
         }
+        #main {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
         #aside {
             width: 25%;
             height: 780px;
@@ -52,7 +57,7 @@
         }
 
         
-        @media (max-width: 1220px){
+        @media (max-width: 1300px){
             #wrap {
                 width: 96%;
             }
@@ -103,9 +108,11 @@
     <div id="wrap">
         <header id="header"></header>
         <nav id="nav"></nav>
-        <aside id="aside"></aside>
-        <sectiion id="section"></sectiion>
-        <article id="article"></article>
+        <div id="main">
+            <div id="aside"></div>
+            <div id="section"></div>
+            <div id="article"></div>
+        </div>
         <footer id="footer"></footer>
     </div>
 </body>

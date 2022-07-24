@@ -28,30 +28,30 @@
             background-color: #81D4FA;
         }
         #main {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            height: 780px;
+            display: grid;
+            grid-template-areas: 
+                "aside section section"
+                "aside article1 article1"
+                "aside article2 article2"
+            ;
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 260px 260px 260px;
         }
         #aside {
-            width: 30%;
-            height: 780px;
             background-color: #4FC3F7;
+            grid-area: aside;
         }
         #section {
-            width: 70%;
-            height: 260px;
             background-color: #29B6F6;
+            grid-area: section;
         }
         #article1 {
-            width: 70%;
-            height: 260px;
             background-color: #03A9F4;
+            grid-area: article1;
         }
         #article2 {
-            width: 70%;
-            height: 260px;
             background-color: #039BE5;
+            grid-area: article2;
         }
         #footer {
             height: 100px;

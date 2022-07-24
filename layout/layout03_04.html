@@ -4,100 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃02</title>
+    <title>레이아웃03</title>
 
     <style>
         * {
             margin: 0;
-            margin: 0 auto;
+            padding: 0;
         }
         body {
-            background-color: #E8F5E9;
+            background-color: #E1F5FE;
             height: 100%;
         }
         #wrap {
+            margin: 0 auto;
             width: 1200px;
         }
         #header {
-            width: 100%;
             height: 100px;
-            background-color: #C8E6C9;
+            background-color: #B3E5FC;
         }
         #nav {
-            width: 100%;
             height: 100px;
-            background-color: #A5D6A7;
+            background-color: #81D4FA;
         }
         #main {
-            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            height: 780px;
         }
         #aside {
-            width: 25%;
+            width: 30%;
             height: 780px;
-            background-color: #81C784;
-            float: left;
+            background-color: #4FC3F7;
         }
         #section {
-            width: 50%;
-            height: 780px;
-            background-color: #66BB6A;
-            float: left;
+            width: 70%;
+            height: 260px;
+            background-color: #29B6F6;
         }
-        #article {
-            width: 25%;
-            height: 780px;
-            background-color: #4CAF50;
-            float: left;
+        #t_article {
+        }
+        #article1 {
+            width: 100%;
+            height: 260px;
+            background-color: #03A9F4;
+        }
+        #article2 {
+            width: 100%;
+            height: 260px;
+            background-color: #039BE5;
         }
         #footer {
-            width: 100%;
             height: 100px;
-            background-color: #43A047;
-            clear: both;
+            background-color: #0288D1;
         }
+
         @media (max-width: 1300px){
             #wrap {
                 width: 96%;
+            }
+            #t_article {
+                display: flex;
+            }
+            #article1 {
+                width: 50%;
+                height: 520px;
+            }
+            #article2 {
+                width: 50%;
+                height: 520px;
             }
         }
         @media (max-width: 768px){
             #wrap {
                 width: 100%;
             }
-            #aside {
-            width: 30%;
-            height: 780px;
-            background-color: #81C784;
-        }
             #section {
-            width: 70%;
-            height: 780px;
-            background-color: #66BB6A;
-        }
-            #article {
-            width: 100%;
-            height: 150px;
-            background-color: #4CAF50;
-        }
+                height: 390px;
+            }      
+            #article1 {
+                width: 100%;
+                height: 390px;
+            }
+            #article2 {
+                display: none;
+            }
         }
         @media (max-width: 480px){
-            #wrap {
-                width: 100%;
-            }
             #aside {
                 width: 100%;
                 height: 200px;
-                background-color: #81C784;
             }
             #section {
                 width: 100%;
                 height: 430px;
-                background-color: #66BB6A;
-            }
-            #article {
+            }      
+            #article1 {
                 width: 100%;
                 height: 150px;
-                background-color: #4CAF50;
             }
         }
     </style>
@@ -109,7 +114,10 @@
         <div id="main">
             <div id="aside"></div>
             <div id="section"></div>
-            <div id="article"></div>
+            <div id="t_article">
+                <div id="article1"></div>
+                <div id="article2"></div>
+            </div>
         </div>
         <div id="footer"></div>
     </div>
